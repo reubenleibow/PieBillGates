@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <include>DeskTop</include>
         <include>Text</include>
         <variable constant="0" name="Wait" sid="5830640016527109" static="0" type="number">0</variable>
         <variable constant="1" name="GAMEOVERTEXT" sid="9765790326046929" static="0" type="text">Congratulations, in {TIME} seconds you managed to throw {AMOUNT} pies at bill gates.  Did you enjoy it?  Your Score is: {SCORE}</variable>
@@ -21,7 +22,37 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="7695119836725675" type="System">
+                    <param id="0" name="Variable">Sound</param>
+                    <param id="1" name="Value">WebStorage.LocalValue(&quot;Sound&quot;)</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="784214729580109">
+                    <conditions>
+                        <condition id="6" inverted="1" name="Compare key value (as text)" sid="106788601057157" type="WebStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                            <param id="1" name="Text to compare">&quot;Off&quot;</param>
+                            <param id="2" name="Case sensitivity">0</param>
+                        </condition>
+                        <condition id="6" inverted="1" name="Compare key value (as text)" sid="4247000197403164" type="WebStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                            <param id="1" name="Text to compare">&quot;On&quot;</param>
+                            <param id="2" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="6399248888138898" type="WebStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                            <param id="1" name="Value">&quot;On&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8561500383794276" type="System">
+                            <param id="0" name="Variable">Sound</param>
+                            <param id="1" name="Value">&quot;On&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="2958923424608044">
             <conditions />

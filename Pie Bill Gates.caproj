@@ -13,7 +13,9 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
@@ -275,10 +277,10 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5514473971480523" speed="5">
-                    <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\reube_000\Documents\Pie\Bill.png" />
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\Bill.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="9125998451973512" speed="5">
-                    <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\reube_000\Documents\Pie\IconSelected.png" />
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\IconSelected.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -304,18 +306,79 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="WebStorage" sid="4650555489410688">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Sprite" sid="3480029664985896">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4289244793680798" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Off" pingpong="0" repeatcount="1" repeatto="0" sid="7031759169708406" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="8699955381346242">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="BillUIcon2" sid="8096569751535038">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216574355310081" speed="5">
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\HelpS.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="890658060646734" speed="5">
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\Help.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="5535451038864857">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="5228070035123395">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7906039286936466" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\reube_000\Documents\Pie\HelpStuffText.png">
+                        <collision-poly>
+                            <point x="0" y="0.00238095" />
+                            <point x="1" y="0.00238095" />
+                            <point x="1" y="0.0571428" />
+                            <point x="0" y="0.0595238" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Close_Button3" sid="5915152465313793">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Nothing" pingpong="0" repeatcount="1" repeatto="0" sid="6435295905644462" speed="5">
+                    <frame duration="1" hotspotX="0.366667" hotspotY="0.333333" />
+                </animation>
+                <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="9327057572496176" speed="5">
+                    <frame duration="1" hotspotX="0.366667" hotspotY="0.333333" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Buttons" plugin-id="Sprite" sid="1302752239740763">
             <members>
                 <member>Button</member>
                 <member>Close_Button2</member>
+                <member>Close_Button3</member>
             </members>
         </family>
         <family name="Icons" plugin-id="Sprite" sid="4559270784497455">
             <members>
                 <member>BillIcon</member>
                 <member>BillUIcon</member>
+                <member>BillUIcon2</member>
             </members>
             <instance-variables>
                 <instance-variable name="Select" sid="4831261419704816" type="number" />
@@ -363,6 +426,7 @@
                 <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
+        <global-instance type="WebStorage" uid="39" />
     </global-instances>
     <sounds-folder>
         <file name="splat.ogg" />

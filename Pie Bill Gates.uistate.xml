@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>Pie Bill Gates</layout>
         <layout>DeskTop</layout>
-        <event-sheet active="1">Game</event-sheet>
-        <event-sheet>DeskTop</event-sheet>
+        <event-sheet>Game</event-sheet>
+        <event-sheet active="1">DeskTop</event-sheet>
         <event-sheet>Text</event-sheet>
     </open-tabs>
     <properties>
@@ -49,5 +49,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BillIcon/" />
         <folder expanded="1" path="animation-folder/BillUIcon/" />
         <folder expanded="1" path="animation-folder/Close_Button2/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/BillUIcon2/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Close_Button3/" />
     </folders-expanded>
 </c2uistate>
