@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DeskTop</name>
+    <events>
+        <variable constant="0" name="IconSelected" sid="4189283293950222" static="0" type="number">0</variable>
+        <include>Text</include>
+        <event-block sid="7963162828764216">
+            <conditions>
+                <condition id="17" name="On tap object" sid="8397715619835782" type="Touch">
+                    <param id="0" name="Object">Icons</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7859805460558519" type="System">
+                    <param id="0" name="Variable">IconSelected</param>
+                    <param id="1" name="Value">Icons.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9185303712657725">
+            <conditions>
+                <condition id="14" name="On tap" sid="4695099725449155" type="Touch" />
+                <condition id="4" inverted="1" name="Is touching object" sid="7550890787994967" type="Touch">
+                    <param id="0" name="Object">Icons</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5448111394350733" type="System">
+                    <param id="0" name="Variable">IconSelected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="2270262872443436" type="Icons">
+                    <param id="0" name="Instance variable">Select</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7314142246239192">
+            <conditions>
+                <condition id="-11" name="For Each" sid="5994301828138664" type="System">
+                    <param id="0" name="Object">Icons</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2357013950153712">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="314813297339427" type="System">
+                            <param id="0" name="Variable">IconSelected</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Icons.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6940987638630692" type="Icons">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="843984155752876">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8560213465216367" type="System">
+                            <param id="0" name="Variable">IconSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Icons.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8346146957699321" type="Icons">
+                            <param id="0" name="Animation">&quot;Selected&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6842845667205096">
+            <conditions>
+                <condition id="18" name="On double-tap object" sid="8441368242169892" type="Touch">
+                    <param id="0" name="Object">Sprite8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5739210493632138" type="System">
+                    <param id="0" name="Layout">Pie Bill Gates</param>
+                </action>
+                <action id="-9" name="Set value" sid="9513354747710752" type="System">
+                    <param id="0" name="Variable">Upgrade</param>
+                    <param id="1" name="Value">&quot;Old&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5649005223008506">
+            <conditions>
+                <condition id="18" name="On double-tap object" sid="1598857418586993" type="Touch">
+                    <param id="0" name="Object">Sprite10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6509934637140646" type="System">
+                    <param id="0" name="Layout">Pie Bill Gates</param>
+                </action>
+                <action id="-9" name="Set value" sid="4679253918124167" type="System">
+                    <param id="0" name="Variable">Upgrade</param>
+                    <param id="1" name="Value">&quot;New&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

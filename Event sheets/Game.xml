@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game</name>
+    <events>
+        <include>Text</include>
+        <variable constant="0" name="Wait" sid="5830640016527109" static="0" type="number">0</variable>
+        <variable constant="1" name="GAMEOVERTEXT" sid="9765790326046929" static="0" type="text">Congratulations, in {TIME} seconds you managed to throw {AMOUNT} pies at bill gates.  Did you enjoy it?  Your Score is: {SCORE}</variable>
+        <variable constant="0" name="Score" sid="1999479309751033" static="0" type="number">0</variable>
+        <variable constant="0" name="Game_Started" sid="5429230707216029" static="0" type="number">0</variable>
+        <variable constant="0" name="Time_Left" sid="3790628265188476" static="0" type="number">30</variable>
+        <variable constant="0" name="Upgrade" sid="2719709856786807" static="0" type="text">Old</variable>
+        <event-block sid="3740403725591703">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="9823624161447498" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5710575238175155" type="Audio">
+                    <param id="0" name="Audio file">startup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2958923424608044">
+            <conditions />
+            <actions>
+                <action id="0" name="Set text" sid="6342993756529142" type="Score_Text">
+                    <param id="0" name="Text">zeropad(Score, 4)</param>
+                </action>
+                <action id="0" name="Set text" sid="295459507153537" type="Time_Text">
+                    <param id="0" name="Text">zeropad(Time_Left, 2)</param>
+                </action>
+                <action id="0" name="Set text" sid="9580812907771614" type="SpriteFont">
+                    <param id="0" name="Text">replace(replace(replace(GAMEOVERTEXT, &quot;{AMOUNT}&quot;, str(Score/2)), &quot;{SCORE}&quot;,str( Score)), &quot;{TIME}&quot;, str(30))</param>
+                </action>
+                <action id="-3" name="Set position" sid="2298490311055287" type="SpriteFont">
+                    <param id="0" name="X">Sprite5.X-104</param>
+                    <param id="1" name="Y">Sprite5.Y-63</param>
+                </action>
+                <action id="-3" name="Set position" sid="1614382132430434" type="Button">
+                    <param id="0" name="X">Sprite5.X+1</param>
+                    <param id="1" name="Y">Sprite5.Y+69</param>
+                </action>
+                <action id="0" name="Set text" sid="2306161539546832" type="Text">
+                    <param id="0" name="Text">Wait&amp;newline&amp;Game_Started</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8498845178759891">
+            <conditions>
+                <condition id="4" name="On finished" sid="3412993523466013" type="Start_Button">
+                    <param id="0" name="Animation">&quot;CountDown&quot;&amp;Upgrade</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="8260811849929885" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7422388859363909" type="System">
+                    <param id="0" name="Variable">Game_Started</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7922487577547315" type="Start_Button">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="6158544461089532" type="SpriteFont">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9323847613215497">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="782154881691904" type="System">
+                    <param id="0" name="Variable">Game_Started</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6493467082456883">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6236196642179952" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9566079688054001">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="926162829454899" type="PopUp">
+                                    <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="2368420384309061" type="System">
+                                    <param id="0" name="Object">PopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="direction" sid="7206005800027904" static="0" type="number">0</variable>
+                                <event-block sid="3078110399589633">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5539149190333265" type="System">
+                                            <param id="0" name="Variable">direction</param>
+                                            <param id="1" name="Value">int(random(2))</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="5418402062081341" type="PopUp">
+                                            <param id="0" name="Animation">&quot;Up&quot;&amp;Upgrade</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5920979196943771">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="2843376517272683" type="System">
+                                                    <param id="0" name="Variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="7166201227592721" type="PopUp">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7372179745657218">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="4128520269801989" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="8377392510933063" type="PopUp">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8060222284352533">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="3276388307642689" type="PopUp">
+                            <param id="0" name="Animation">&quot;Up&quot;&amp;Upgrade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="1482722341545767" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4837894493598839">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is playing" sid="1663835008324638" type="PopUp">
+                                    <param id="0" name="Animation">&quot;Pie&quot;&amp;Upgrade</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3106140341881892" type="PopUp">
+                                    <param id="0" name="Animation">&quot;Down&quot;&amp;Upgrade</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6021841764711823">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="4438727228055262" type="PopUp">
+                            <param id="0" name="Animation">&quot;Down&quot;&amp;Upgrade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5571577620549312" type="PopUp">
+                            <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3472047782960617">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="5799541273730797" type="PopUp">
+                            <param id="0" name="Animation">&quot;Pie&quot;&amp;Upgrade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6951413231496043" type="PopUp">
+                            <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4363935271961784">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7197185133637515" type="Touch">
+                            <param id="0" name="Object">PopUp</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="7864507689382982" type="PopUp">
+                            <param id="0" name="Animation">&quot;Up&quot;&amp;Upgrade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5964492914765202" type="PopUp">
+                            <param id="0" name="Animation">&quot;Pie&quot;&amp;Upgrade</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="59546050952076" type="Audio">
+                            <param id="0" name="Audio file">splat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3973242926454018" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="659409505094449">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="456131930043621" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="3048491095267547" type="System">
+                            <param id="0" name="Variable">Time_Left</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2317027358661562">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5936879640078117" type="System">
+                            <param id="0" name="Variable">Time_Left</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6549022749137491" type="System">
+                            <param id="0" name="Variable">Game_Started</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="786362722219649" type="System">
+                            <param id="0" name="Variable">Time_Left</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4154474096942172" type="Start_Button">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3424124139941906" type="Start_Button">
+                            <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="5721340176241912" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="1657020253177351" type="Audio" />
+                        <action id="0" name="Play" sid="7240130999303048" type="Audio">
+                            <param id="0" name="Audio file">gameover</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8435120668663162">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="3091561392104456" type="Touch">
+                    <param id="0" name="Object">Buttons</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7480678919809234" type="Buttons">
+                    <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5159752730451786">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="1027535076471002" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="1001369678646438" type="System">
+                            <param id="0" name="Variable">Wait</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="6237641028688795" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8405225553402545">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="2871750222836087" type="Touch">
+                    <param id="0" name="Object">Buttons</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6213333856293753" type="Buttons">
+                    <param id="0" name="Animation">&quot;Nothing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8149132624644941">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1300956501304531" type="System">
+                    <param id="0" name="Variable">Game_Started</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="5438981333538754" type="PopUp">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9096762079199204" type="PopUp">
+                    <param id="0" name="Animation">&quot;Over&quot;&amp;Upgrade</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5822129089185263">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="74600132004576" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1168459926376988" type="System">
+                            <param id="0" name="Variable">Wait</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="9570780503618617" type="System">
+                            <param id="0" name="Variable">Wait</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5418911497539086">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="1004308687869454" type="System">
+                            <param id="0" name="Layer">1</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="9368250049074185" type="System">
+                            <param id="0" name="Layer">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5770797676033052">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="6896427859564849" type="Touch">
+                                    <param id="0" name="Object">Start_Button</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6028895383405689" type="Start_Button">
+                                    <param id="0" name="Animation">&quot;CountDown&quot;&amp;Upgrade</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9058942706482637" type="System">
+                                    <param id="0" name="Variable">Game_Started</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4623437674829529" type="PopUp">
+                                    <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6178108330651544" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2255273010912941" type="System">
+                                    <param id="0" name="Variable">Wait</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="4088259143129002" type="Audio">
+                                    <param id="0" name="Audio file">Bg_Short</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="9969038905303564" type="Audio">
+                                    <param id="0" name="Audio file">tick</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7757997351218733">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="5149247607338966" type="Touch" />
+                <condition id="4" name="Is touching object" sid="3174428345261169" type="Touch">
+                    <param id="0" name="Object">Close_Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="4767817668355385" type="Audio" />
+                <action id="-2" name="Go to layout" sid="5759994316804985" type="System">
+                    <param id="0" name="Layout">DeskTop</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7177157433873608">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8212514915556782" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9824152015099321" type="Base">
+                    <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="3266696463268284" type="Start_Button">
+                    <param id="0" name="Animation">&quot;Default&quot;&amp;Upgrade</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="294791987977384" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="691475668726161">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="4549484550931902" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

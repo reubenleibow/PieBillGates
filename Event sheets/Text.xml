@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Text</name>
+    <events>
+        <event-block sid="2053067780982599">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4530128420591399" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="8406093028244277" type="Family1">
+                    <param id="0" name="Character">&quot;&apos;ijl&quot;</param>
+                    <param id="1" name="Width">2</param>
+                </action>
+                <action id="5" name="Set character width" sid="6478003325238886" type="Family1">
+                    <param id="0" name="Character">&quot;&apos;!,.:Ifrt &quot;</param>
+                    <param id="1" name="Width">3</param>
+                </action>
+                <action id="5" name="Set character width" sid="1639795671713788" type="Family1">
+                    <param id="0" name="Character">&quot;&quot;&quot;Jsxyz1&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="2171555906387924" type="Family1">
+                    <param id="0" name="Character">&quot;?FLabcdeghknopquv234567890&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="8413328881281408" type="Family1">
+                    <param id="0" name="Character">&quot;ABCEKPSTVXYZ&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="7899238304661427" type="Family1">
+                    <param id="0" name="Character">&quot;DGHNOQRUmw&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="9676304031581041" type="Family1">
+                    <param id="0" name="Character">&quot;M&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="6552716805288995" type="Family1">
+                    <param id="0" name="Character">&quot;W&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

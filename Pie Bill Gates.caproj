@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Pie Bill Gates</name>
+    <description>vwetgwefgbwree</description>
+    <version>1.0.0.0</version>
+    <author>cffgtvrtgvtg</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapppbg</app-id>
+    <unique-id>20aqb68zan11x</unique-id>
+    <saved-with-version>19100</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>591</width>
+        <height>506</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>DeskTop</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="PopUp" sid="3949286663195931">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Random" sid="7726915348649761" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="DefaultOld" pingpong="0" repeatcount="1" repeatto="0" sid="2497105074989757" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" original-source="C:\Users\reube_000\Documents\Pie\pict1.bmp" />
+                </animation>
+                <animation framecount="5" loop="0" name="UpOld" pingpong="0" repeatcount="1" repeatto="0" sid="5446539574802465" speed="10">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="5" loop="0" name="DownOld" pingpong="0" repeatcount="1" repeatto="0" sid="309251716126561" speed="10">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="9" loop="0" name="PieOld" pingpong="0" repeatcount="1" repeatto="0" sid="8684057671057851" speed="10">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="OverOld" pingpong="0" repeatcount="1" repeatto="0" sid="6364215324192818" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" original-source="C:\Users\reube_000\Documents\Pie\Default\count.bmp" />
+                </animation>
+                <animation framecount="1" loop="0" name="DefaultNew" pingpong="0" repeatcount="1" repeatto="0" sid="4577244626972281" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="5" loop="0" name="UpNew" pingpong="0" repeatcount="1" repeatto="0" sid="1875914032247314" speed="10">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="5" loop="0" name="DownNew" pingpong="0" repeatcount="1" repeatto="0" sid="9093956423084403" speed="10">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="9" loop="0" name="PieNew" pingpong="0" repeatcount="1" repeatto="0" sid="3489205306792767" speed="10">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="OverNew" pingpong="0" repeatcount="1" repeatto="0" sid="2105635750930669" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Base" sid="6185269345374253">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="DefaultOld" pingpong="0" repeatcount="1" repeatto="0" sid="7838782774626702" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\miscpics.bmp" />
+                </animation>
+                <animation framecount="1" loop="0" name="DefaultNew" pingpong="0" repeatcount="1" repeatto="0" sid="9144991885407582" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="6103599320109969">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Time_Text" sid="4709253494817124">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\reube_000\Documents\Pie\Default\numbers.bmp" />
+        </object-type>
+        <object-type name="Start_Button" sid="9545765956453577">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="DefaultOld" pingpong="0" repeatcount="1" repeatto="0" sid="7631252456054638" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" original-source="C:\Users\reube_000\Documents\Pie\Default\count.bmp" />
+                </animation>
+                <animation framecount="4" loop="0" name="CountDownOld" pingpong="0" repeatcount="1" repeatto="0" sid="8501591280907179" speed="1">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="DefaultNew" pingpong="0" repeatcount="1" repeatto="0" sid="9900697163677237" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="CountDownNew" pingpong="0" repeatcount="1" repeatto="0" sid="9028125894454132" speed="1">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.504505" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score_Text" sid="9948789559838043">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\reube_000\Documents\Pie\Default\numbers.bmp" />
+        </object-type>
+        <object-type name="Sprite" sid="2433169714068271">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8454561267310951" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="7786615139574942">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6910361915721028" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\Default\title.bmp" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="2503718150868598">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7307914945994937" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\Default\miscpics.bmp">
+                        <collision-poly>
+                            <point x="0" y="0.0196078" />
+                            <point x="1" y="0.0196078" />
+                            <point x="1" y="0.980392" />
+                            <point x="0" y="0.980392" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="8439600588686653">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9292256390607363" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\Default\miscpics.bmp" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="9230482554742726">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="6057580250401646">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9017391825629484" speed="5">
+                    <frame duration="1" hotspotX="0.502008" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.0886076" />
+                            <point x="0" y="0.0917721" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="7965758231572879">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8116269283309436" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.962963" />
+                            <point x="0" y="0.962963" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="3385562531922168">
+            <plugin id="Spritefont2" />
+            <texture original-source="Z:\fonts.bmp" />
+        </object-type>
+        <object-type name="Audio" sid="3475633337461556">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Button" sid="8736337472811633">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Nothing" pingpong="0" repeatcount="1" repeatto="0" sid="1107468334961375" speed="5">
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.52" />
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="4036969895187613" speed="5">
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.52" />
+                </animation>
+                <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="1057679361342066" speed="5">
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.52">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Close_Button" sid="2981718471641097">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Nothing" pingpong="0" repeatcount="1" repeatto="0" sid="7667799552549058" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="3498128252965725" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="5038200267606826">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3055538906725183" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Pie\win98se.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="7633264932428139">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5514473971480523" speed="5">
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\reube_000\Documents\Pie\Bill.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="9125998451973512" speed="5">
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\reube_000\Documents\Pie\IconSelected.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="4556388636001432">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7710649219461222" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="567032333353144">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1704555942273157" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\BillUpgrade.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="8566527332590863" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0" original-source="C:\Users\reube_000\Documents\Pie\BillUpgradeSelected.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="4940034814642734">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Buttons" plugin-id="Sprite" sid="1302752239740763">
+            <members>
+                <member>Button</member>
+                <member>Close_Button</member>
+            </members>
+        </family>
+        <family name="Icons" plugin-id="Sprite" sid="4559270784497455">
+            <members>
+                <member>Sprite10</member>
+                <member>Sprite8</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Select" sid="4831261419704816" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Family1" plugin-id="Spritefont2" sid="9006288772601857">
+            <members>
+                <member>SpriteFont</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>DeskTop.xml</layout>
+        <layout>Pie Bill Gates.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>DeskTop.xml</event-sheet>
+        <event-sheet>Text.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="26">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="37">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="splat.ogg" />
+        <file name="splat.m4a" />
+        <file name="tick.m4a" />
+        <file name="tick.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="startup.ogg" />
+        <file name="gameover.ogg" />
+        <file name="startup.m4a" />
+        <file name="gameover.m4a" />
+        <file name="Bg_Short.ogg" />
+        <file name="bg_Short.m4a" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
