@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.mycompany.myapppbg" version="1.0.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.dotnetdevaddict.piebillgates" version="1.0.0.0">
 
 	<name>Pie Bill Gates</name>
-	<description>vwetgwefgbwree</description>
-	<author>cffgtvrtgvtg</author>
+	<description>Way back on the 4th Feb 1998 a guy called Noel Godin threw a cream pie in Bill Gates face. After this we made a game so you could have a go.</description>
+	<author>.NET Development Addict</author>
 
 	<icon src="icon-128.png" width="128" height="128" />
 	<icon src="icon-256.png" width="256" height="256" gap:role="default" />
