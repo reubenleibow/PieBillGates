@@ -25,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="Buttons" />
         <family expanded="0" name="Icons" />
-        <family expanded="0" name="Family1" />
+        <family expanded="0" name="Animatied_Text" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -38,17 +38,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PopUp/" />
         <folder expanded="1" path="animation-folder/Base/" />
         <folder expanded="1" path="animation-folder/Start_Button/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
-        <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/Sprite5/" />
-        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/BlackStrip/" />
+        <folder expanded="1" path="animation-folder/GatesStrip/" />
+        <folder expanded="1" path="animation-folder/Time_Pic/" />
+        <folder expanded="1" path="animation-folder/Score_Pic/" />
+        <folder expanded="1" path="animation-folder/PopUpMenu/" />
+        <folder expanded="1" path="animation-folder/programTop/" />
         <folder expanded="1" path="animation-folder/Button/" />
-        <folder expanded="1" path="animation-folder/Close_Button/" />
-        <folder expanded="1" path="animation-folder/Sprite7/" />
-        <folder expanded="1" path="animation-folder/Sprite8/" />
-        <folder expanded="1" path="animation-folder/Sprite9/" />
-        <folder expanded="1" path="animation-folder/Sprite10/" />
+        <folder expanded="1" path="animation-folder/Desktop_Pic/" />
+        <folder expanded="1" path="animation-folder/BillIcon/" />
+        <folder expanded="1" path="animation-folder/BillUIcon/" />
+        <folder expanded="1" path="animation-folder/Close_Button2/" />
     </folders-expanded>
 </c2uistate>

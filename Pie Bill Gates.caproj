@@ -13,7 +13,6 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -162,7 +161,7 @@
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\reube_000\Documents\Pie\Default\numbers.bmp" />
         </object-type>
-        <object-type name="Sprite" sid="2433169714068271">
+        <object-type name="BlackStrip" sid="2433169714068271">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8454561267310951" speed="5">
@@ -170,7 +169,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="7786615139574942">
+        <object-type name="GatesStrip" sid="7786615139574942">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6910361915721028" speed="5">
@@ -178,7 +177,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="2503718150868598">
+        <object-type name="Time_Pic" sid="2503718150868598">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7307914945994937" speed="5">
@@ -193,7 +192,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="8439600588686653">
+        <object-type name="Score_Pic" sid="8439600588686653">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9292256390607363" speed="5">
@@ -201,7 +200,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite5" sid="9230482554742726">
+        <object-type name="PopUpMenu" sid="9230482554742726">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="DragDrop" sid="6057580250401646">
@@ -221,7 +220,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="7965758231572879">
+        <object-type name="programTop" sid="7965758231572879">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8116269283309436" speed="5">
@@ -264,18 +263,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Close_Button" sid="2981718471641097">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Nothing" pingpong="0" repeatcount="1" repeatto="0" sid="7667799552549058" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-                <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="3498128252965725" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite7" sid="5038200267606826">
+        <object-type name="Desktop_Pic" sid="5038200267606826">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3055538906725183" speed="5">
@@ -283,7 +271,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite8" sid="7633264932428139">
+        <object-type name="BillIcon" sid="7633264932428139">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5514473971480523" speed="5">
@@ -294,15 +282,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite9" sid="4556388636001432">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7710649219461222" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite10" sid="567032333353144">
+        <object-type name="BillUIcon" sid="567032333353144">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1704555942273157" speed="5">
@@ -313,27 +293,40 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="4940034814642734">
-            <plugin id="Text" />
+        <object-type name="Close_Button2" sid="8122537253918593">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Nothing" pingpong="0" repeatcount="1" repeatto="0" sid="9135938658904284" speed="5">
+                    <frame duration="1" hotspotX="0.366667" hotspotY="0.333333" />
+                </animation>
+                <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="5787601749321571" speed="5">
+                    <frame duration="1" hotspotX="0.366667" hotspotY="0.333333" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
         <family name="Buttons" plugin-id="Sprite" sid="1302752239740763">
             <members>
                 <member>Button</member>
-                <member>Close_Button</member>
+                <member>Close_Button2</member>
             </members>
         </family>
         <family name="Icons" plugin-id="Sprite" sid="4559270784497455">
             <members>
-                <member>Sprite10</member>
-                <member>Sprite8</member>
+                <member>BillIcon</member>
+                <member>BillUIcon</member>
             </members>
             <instance-variables>
                 <instance-variable name="Select" sid="4831261419704816" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="3732311609776266">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
         </family>
-        <family name="Family1" plugin-id="Spritefont2" sid="9006288772601857">
+        <family name="Animatied_Text" plugin-id="Spritefont2" sid="9006288772601857">
             <members>
                 <member>SpriteFont</member>
             </members>
