@@ -365,6 +365,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SpriteFont2" sid="6078646352864531">
+            <plugin id="Spritefont2" />
+            <texture original-source="Z:\fonts.bmp" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Buttons" plugin-id="Sprite" sid="1302752239740763">
@@ -392,6 +396,7 @@
         <family name="Animatied_Text" plugin-id="Spritefont2" sid="9006288772601857">
             <members>
                 <member>SpriteFont</member>
+                <member>SpriteFont2</member>
             </members>
         </family>
     </families>

@@ -3,9 +3,29 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DeskTop</name>
     <events>
+        <variable constant="0" name="Cacluation" sid="6791606959407959" static="0" type="number">0</variable>
+        <include>Game</include>
+        <variable constant="0" name="TimeTotal" sid="7137274619923966" static="0" type="number">0</variable>
         <variable constant="0" name="Sound" sid="361518621872228" static="0" type="text">On</variable>
         <variable constant="0" name="IconSelected" sid="4189283293950222" static="0" type="number">0</variable>
         <include>Text</include>
+        <event-block sid="4221728316575412">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="6056391306418553" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Play" sid="4556087375778832" type="Audio">
+                    <param id="0" name="Audio file">startup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="3369172540434427" type="System">
+                    <param id="0" name="Variable">Sound</param>
+                    <param id="1" name="Value">WebStorage.LocalValue(&quot;Sound&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="7963162828764216">
             <conditions>
                 <condition id="17" name="On tap object" sid="8397715619835782" type="Touch">
@@ -109,6 +129,12 @@
                             <param id="0" name="Variable">Upgrade</param>
                             <param id="1" name="Value">&quot;Old&quot;</param>
                         </action>
+                        <action id="0" name="Play" sid="7743839505148203" type="Audio">
+                            <param id="0" name="Audio file">startup</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="5649005223008506">
@@ -124,6 +150,12 @@
                         <action id="-9" name="Set value" sid="4679253918124167" type="System">
                             <param id="0" name="Variable">Upgrade</param>
                             <param id="1" name="Value">&quot;New&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="6933260817614782" type="Audio">
+                            <param id="0" name="Audio file">startup</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -291,6 +323,12 @@
                     <param id="0" name="X">Sprite2.X+200</param>
                     <param id="1" name="Y">Sprite2.Y-206</param>
                 </action>
+                <action disabled="1" id="0" name="Set text" sid="5341591504103924" type="SpriteFont2">
+                    <param id="0" name="Text">WebStorage.LocalValue(&quot;Time&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="1473657157816874" type="SpriteFont2">
+                    <param id="0" name="Text">zeropad(int(int(WebStorage.LocalValue(&quot;Time&quot;))/60), 2)&amp;&quot;:&quot;&amp;zeropad(CalacultionsC, 2)</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6452298968145548">
@@ -319,6 +357,49 @@
                 <action id="-4" name="Set layer visible" sid="2264194042335796" type="System">
                     <param id="0" name="Layer">1</param>
                     <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1255129448663245">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4652050748995367" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2311355234872617" type="System">
+                    <param id="0" name="Variable">Cacluation</param>
+                    <param id="1" name="Value">TimeTotal</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2379800251439521">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5612514266801098" type="System">
+                    <param id="0" name="Variable">Cacluation</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">60</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="4288445529966203" type="System">
+                    <param id="0" name="Variable">Cacluation</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8374080799860161">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7961873090970142" type="System">
+                    <param id="0" name="Variable">Cacluation</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">60</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1388662532101183" type="System">
+                    <param id="0" name="Variable">CalacultionsC</param>
+                    <param id="1" name="Value">Cacluation</param>
                 </action>
             </actions>
         </event-block>

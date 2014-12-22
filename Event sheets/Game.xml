@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <variable constant="0" name="CalacultionsC" sid="6901428636404458" static="0" type="number">0</variable>
         <include>DeskTop</include>
         <include>Text</include>
         <variable constant="0" name="Wait" sid="5830640016527109" static="0" type="number">0</variable>
@@ -16,18 +17,31 @@
                 <condition id="-25" name="On loader layout complete" sid="9823624161447498" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="5710575238175155" type="Audio">
-                    <param id="0" name="Audio file">startup</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
                 <action id="-9" name="Set value" sid="7695119836725675" type="System">
                     <param id="0" name="Variable">Sound</param>
                     <param id="1" name="Value">WebStorage.LocalValue(&quot;Sound&quot;)</param>
                 </action>
+                <action id="-9" name="Set value" sid="5142862083035765" type="System">
+                    <param id="0" name="Variable">TimeTotal</param>
+                    <param id="1" name="Value">WebStorage.LocalValue(&quot;Time&quot;)</param>
+                </action>
             </actions>
             <sub-events>
+                <event-block sid="5201835041356944">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Compare key value (as number)" sid="7659834006768162" type="WebStorage">
+                            <param id="0" name="Key">&quot;Time&quot;</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="5296099439784993" type="WebStorage">
+                            <param id="0" name="Key">&quot;Time&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="784214729580109">
                     <conditions>
                         <condition id="6" inverted="1" name="Compare key value (as text)" sid="106788601057157" type="WebStorage">
@@ -261,7 +275,27 @@
                             <param id="0" name="Variable">Time_Left</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action disabled="1" id="-10" name="Add to" sid="2417370829118284" type="System">
+                            <param id="0" name="Variable">TimeTotal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set local value" sid="2764840972711345" type="WebStorage">
+                            <param id="0" name="Key">&quot;Time&quot;</param>
+                            <param id="1" name="Value">TimeTotal</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="8333778609770159" type="System">
+                            <param id="0" name="Variable">TimeTotal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block sid="1044434012477069">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="457530307127403" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
                 <event-block sid="2317027358661562">
                     <conditions>
@@ -484,6 +518,27 @@
                 <action id="-9" name="Set value" sid="9261752760413515" type="System">
                     <param id="0" name="Variable">Game_Started</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5944112214818508">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5120537570949175" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="8991154942800276" type="System">
+                    <param id="0" name="Variable">Time_Left</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="1027535746861344" type="System">
+                    <param id="0" name="Variable">TimeTotal</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set local value" sid="7609612973202845" type="WebStorage">
+                    <param id="0" name="Key">&quot;Time&quot;</param>
+                    <param id="1" name="Value">TimeTotal</param>
                 </action>
             </actions>
         </event-block>
