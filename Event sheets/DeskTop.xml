@@ -14,12 +14,6 @@
                 <condition id="-25" name="On loader layout complete" sid="6056391306418553" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="0" name="Play" sid="4556087375778832" type="Audio">
-                    <param id="0" name="Audio file">startup</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
                 <action id="-9" name="Set value" sid="3369172540434427" type="System">
                     <param id="0" name="Variable">Sound</param>
                     <param id="1" name="Value">WebStorage.LocalValue(&quot;Sound&quot;)</param>
