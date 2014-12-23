@@ -275,18 +275,6 @@
                             <param id="0" name="Variable">Time_Left</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action disabled="1" id="-10" name="Add to" sid="2417370829118284" type="System">
-                            <param id="0" name="Variable">TimeTotal</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set local value" sid="2764840972711345" type="WebStorage">
-                            <param id="0" name="Key">&quot;Time&quot;</param>
-                            <param id="1" name="Value">TimeTotal</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="8333778609770159" type="System">
-                            <param id="0" name="Variable">TimeTotal</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="1044434012477069">
@@ -528,10 +516,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="8991154942800276" type="System">
-                    <param id="0" name="Variable">Time_Left</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="-10" name="Add to" sid="1027535746861344" type="System">
                     <param id="0" name="Variable">TimeTotal</param>
                     <param id="1" name="Value">1</param>
